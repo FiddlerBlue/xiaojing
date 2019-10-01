@@ -7,5 +7,6 @@ public class TypeConverter {
         int a = 20;
         byte c = (byte) (a + b);
         System.out.println(c);
+        System.out.println("Just want to check how conflict works!");
     }
 }
