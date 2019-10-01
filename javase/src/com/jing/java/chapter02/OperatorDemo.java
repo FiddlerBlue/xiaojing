@@ -13,6 +13,6 @@ public class OperatorDemo {
         System.out.println("-----------");
         System.out.println(2<<3);
         System.out.println(true?false:true?false:true);
-        System.out.println(false?false:true?false:true);
+        //System.out.println(false?false:true?false:true);
     }
 }
