@@ -38,4 +38,8 @@ public class Dog extends Pet{
         super.play();
         System.out.println("Dog is playing...");
     }
+
+    public String toString(){
+        return super.toString() + ", my sound is " + this.sound;
+    }
 }

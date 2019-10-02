@@ -31,4 +31,9 @@ public class Pet {
     public void play(){
         System.out.println("play...");
     }
+
+    @Override
+    public String toString(){
+        return "my name is " + this.name + ", my age is " + this.age;
+    }
 }

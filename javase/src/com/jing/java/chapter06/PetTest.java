@@ -11,5 +11,6 @@ public class PetTest {
         dog.setName("Big Yellow");
         System.out.println(dog.getName());
         dog.play();
+        System.out.println(dog);
     }
 }
