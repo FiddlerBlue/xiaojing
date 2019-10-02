@@ -1,4 +1,5 @@
 package com.jing.java.chapter03;
+import java.util.Arrays;
 
 public class MatrixArray {
     public static void main(String[] args) {
@@ -15,11 +16,15 @@ public class MatrixArray {
 
         int[][] arrayInit = {{1,2},{3,4,5},{6,7,8,9}};
         //System.out.println(arrayInit[2][3]);
-        int[] arraySource = {1,2,3,4,5,6,7,8,9};
+        int[] arraySource = {11,24,3,14,5,16,37,28,9};
         int[] arrayDest = new int[10];
         System.arraycopy(arraySource,2,arrayDest,4,3);
-        for (int i = 0; i < arrayDest.length; i++){
-            System.out.println(arrayDest[i]);
+        //for (int i = 0; i < arrayDest.length; i++){
+        //    System.out.println(arrayDest[i]);
+        //}
+        Arrays.sort(arraySource);
+        for (int i = 0; i < arraySource.length; i++){
+            System.out.println(arraySource[i]);
         }
     }
 }
