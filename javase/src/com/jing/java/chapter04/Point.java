@@ -15,6 +15,7 @@ public class Point {
         axisY = 0;
     }
     public Point(int axisX, int axisY){
+        this();
         this.axisX = axisX;
         this.axisY = axisY;
     }
