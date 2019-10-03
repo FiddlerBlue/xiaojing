@@ -5,7 +5,7 @@ package com.jing.java.Polymorphism;
  * @create 10/2/2019
  * @desc Created by Xiaojing at 9:17 PM
  **/
-public class Dog extends Pet {
+public class Dog implements Pet {
     @Override
     public void feed() {
         System.out.println("The dog is feeding bones");

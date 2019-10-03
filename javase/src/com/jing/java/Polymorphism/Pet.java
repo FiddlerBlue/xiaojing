@@ -5,6 +5,6 @@ package com.jing.java.Polymorphism;
  * @create 10/2/2019
  * @desc Created by Xiaojing at 9:15 PM
  **/
-public abstract class Pet {
+public interface Pet {
     public abstract void feed();
 }
