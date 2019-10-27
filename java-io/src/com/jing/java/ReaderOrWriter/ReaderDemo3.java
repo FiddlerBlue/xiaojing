@@ -10,21 +10,28 @@ import java.io.Reader;
  * @create 10/27/2019
  * @desc Created by Xiaojing at 10:07 PM
  **/
-public class ReaderDemo2 {
+public class ReaderDemo3 {
     public static void main(String[] args) {
         Reader reader = null;
 
         try {
             reader = new FileReader("D:\\Work\\Study\\Architect\\respository\\javase\\aaa.md");
-            int read = 0;
-            while ((read = reader.read()) != -1){
-                System.out.println((char)read);
+            int length = 0;
+            char[] buffer = new char[1024];
+            while ((length = reader.read(buffer)) != -1){
+                System.out.println(new String(buffer, 0, length));
             }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e){
             e.printStackTrace();
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

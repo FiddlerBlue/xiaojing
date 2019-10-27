@@ -10,15 +10,18 @@ import java.io.InputStream;
  * @create 10/26/2019
  * @desc Created by Xiaojing at 7:35 PM
  **/
-public class StreamDemo2 {
+public class StreamDemo3 {
     public static void main(String[] args)  {
 
         InputStream inputStream = null;
         try {
-            inputStream = new FileInputStream("D:\\Work\\Study\\Architect\\respository\\javase\\aaa.md");
+            inputStream = new FileInputStream("D:\\Work\\Study\\Architect\\respository\\javase\\readme.md");
             int length = 0;
-            while ((length = inputStream.read()) != -1) {
-                System.out.println((char)length);
+            //添加缓冲区的方式
+            byte[] buffer = new byte[1024];
+            while ((length = inputStream.read(buffer)) != -1) {
+                System.out.println(length);
+                System.out.println(new String(buffer, 0, length));
             }
         } catch (FileNotFoundException e){
             e.printStackTrace();
