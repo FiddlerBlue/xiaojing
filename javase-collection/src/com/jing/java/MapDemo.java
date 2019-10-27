@@ -20,6 +20,7 @@ public class MapDemo {
         System.out.println(map);
         System.out.println(map.isEmpty());
         System.out.println(map.size());
+        System.out.println(map.containsKey("xiaojing"));
         System.out.println(map.containsValue(3));
         map.remove("Wangtao2");
         System.out.println(map);
@@ -35,6 +36,7 @@ public class MapDemo {
             System.out.println(value);
         }
 
+        System.out.println("----------map.keySet()-----------");
         Set<String> keys2 = map.keySet();
         Iterator<String> iterator = keys2.iterator();
         while (iterator.hasNext()){

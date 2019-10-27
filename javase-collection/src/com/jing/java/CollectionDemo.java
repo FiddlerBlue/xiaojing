@@ -4,6 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Iterator;
 
 /**
  * @author Xiaojing
@@ -18,6 +19,11 @@ public class CollectionDemo {
         collection.add(1.23);
         collection.add("abc");
         collection.add(1.23);
+
+        for (Iterator ite = collection.iterator(); ite.hasNext();){
+            System.out.println(ite.next());
+        }
+        System.out.println("---------Now it's at the end-------");
         //强制类型转换
         ((ArrayList) collection).add(2, "mashibing");
         System.out.println(collection);
